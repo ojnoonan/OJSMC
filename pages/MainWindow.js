@@ -1,4 +1,5 @@
 import React from 'react';
+import Home from './Layouts/Home.jsx';
 import Servers from './Layouts/Servers.jsx';
 import Discord from './Layouts/Discord.jsx';
 import Vote from './Layouts/Vote.jsx';
@@ -17,11 +18,11 @@ const MainWindow = ({tab}) => {
             case "Donate":
                 return <Donate/>;
             default:
-                return <Servers/>;
+                return <Home/>;
         }
     }
     return (
-        <div className="min-h-screen bg-cover bg-[url('/img/BG02.jpg')]">
+        <div className="min-h-screen bg-cover bg-[url('/img/BG02.jpg')] flex h-full items-center justify-center">
             {renderCurrentTab()}
         </div>
     )

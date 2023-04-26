@@ -4,6 +4,9 @@ const Navbar = ({changePage, tabs}) => {
     const [navbarOpen, setNavbarOpen] = useState(false);
     const [active, setActive] = useState(tabs[0]);
 
+    const tabsTemp = [...tabs];
+    const mainTab = tabsTemp.shift();
+
     return (
         <div className='fixed bottom-0 inset-x-0 justify-between'>
             <nav className={`relative px-4 py-4 flex justify-between items-center bg-white ${navbarOpen ? 'hidden' : ''}`}>
@@ -38,98 +41,6 @@ const Navbar = ({changePage, tabs}) => {
                             </a>
                         </li>
                     ))}
-                    {/* <li>
-                        <a
-                        className={tabStyle}
-                        onClick={(e) => {
-                            changePage(e.currentTarget.textContent);
-                            setActive(e.currentTarget.textContent);
-                        }}
-                        >
-                        Servers
-                        </a>
-                    </li>
-                    <li className="text-gray-300">
-                        <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        stroke="currentColor"
-                        className="w-4 h-4 current-fill"
-                        viewBox="0 0 24 24"
-                        >
-                        <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"
-                        />
-                        </svg>
-                    </li>
-                    <li>
-                        <a
-                        className={tabStyle}
-                        onClick={(e) => {
-                            changePage(e.currentTarget.textContent);
-                            setActive(e.currentTarget.textContent);
-                        }}
-                        >
-                        Discord
-                        </a>
-                    </li>
-                    <li className="text-gray-300">
-                        <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        stroke="currentColor"
-                        className="w-4 h-4 current-fill"
-                        viewBox="0 0 24 24"
-                        >
-                        <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"
-                        />
-                        </svg>
-                    </li>
-                    <li>
-                        <a
-                        className={tabStyle}
-                        onClick={(e) => {
-                            changePage(e.currentTarget.textContent);
-                            setActive(e.currentTarget.textContent);
-                        }}
-                        >
-                        Vote
-                        </a>
-                    </li>
-                    <li className="text-gray-300">
-                        <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        stroke="currentColor"
-                        className="w-4 h-4 current-fill"
-                        viewBox="0 0 24 24"
-                        >
-                        <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"
-                        />
-                        </svg>
-                    </li>
-                    <li>
-                        <a
-                        className={tabStyle}
-                        onClick={(e) => {
-                            changePage(e.currentTarget.textContent);
-                            setActive(e.currentTarget.textContent);
-                        }}
-                        >
-                        Donate
-                        </a>
-                    </li> */}
                 </ul>
             </nav>
             <div className={`navbar-menu relative z-50 ${navbarOpen ? '' : 'hidden'}`}>
@@ -174,50 +85,6 @@ const Navbar = ({changePage, tabs}) => {
                                 </a>
                             </li>
                         ))}
-                    {/* <li className="mb-1">
-                        <a
-                        className={tabStyleMobile}
-                        onClick={(e) => {
-                            changePage(e.currentTarget.textContent);
-                            setActive(e.currentTarget.textContent);
-                        }}
-                        >
-                        Servers
-                        </a>
-                    </li>
-                    <li className="mb-1">
-                        <a
-                        className={tabStyleMobile}
-                        onClick={(e) => {
-                            changePage(e.currentTarget.textContent);
-                            setActive(e.currentTarget.textContent);
-                        }}
-                        >
-                        Discord
-                        </a>
-                    </li>
-                    <li className="mb-1">
-                        <a
-                        className={tabStyleMobile}
-                        onClick={(e) => {
-                            changePage(e.currentTarget.textContent);
-                            setActive(e.currentTarget.textContent);
-                        }}
-                        >
-                        Vote
-                        </a>
-                    </li>
-                    <li className="mb-1">
-                        <a
-                        className={tabStyleMobile}
-                        onClick={(e) => {
-                            changePage(e.currentTarget.textContent);
-                            setActive(e.currentTarget.textContent);
-                        }}
-                        >
-                        Donate
-                        </a>
-                    </li> */}
                     </ul>
                 </div>
                 </nav>

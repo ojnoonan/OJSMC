@@ -3,7 +3,7 @@ import Navbar from './Navbar.js';
 import MainWindow from './MainWindow.js';
 
 export default function Home() {
-  const tabs = ['Servers', 'Discord', 'Vote', 'Donate'];
+  const tabs = ['Home', 'Servers', 'Discord', 'Vote', 'Donate'];
   const [currentTab, setCurrentTab] = useState(tabs[0]);
 
   return (
